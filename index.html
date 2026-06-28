@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Quote Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="scene">
+        <header class="masthead">
+            <p class="eyebrow">Card Catalog · Vol. I</p>
+            <h1>Random Quote Generator</h1>
+        </header>
+
+        <div class="card-wrap">
+            <article class="index-card" id="quoteCard">
+                <div class="card-row-top">
+                    <span class="card-tab">No. <b id="cardNumber">001</b></span>
+                    <button class="fav-btn" id="favBtn" aria-label="Save this quote to favourites" aria-pressed="false">
+                        <svg id="favIcon" viewBox="0 0 24 24">
+                            <path class="heart-fill"
+                                d="M12 20.2s-7.6-4.4-10.2-9C0.4 8.3 1.5 5 4.6 4.1c2-0.6 4 0.2 5.4 2 1.4-1.8 3.4-2.6 5.4-2 3.1 0.9 4.2 4.2 2.8 7.1-2.6 4.6-10.2 9-10.2 9z"
+                                stroke-linejoin="round" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="quote-body" id="quoteBody">
+                    <blockquote class="quote-text rtl" id="quoteText" dir="rtl" lang="ur">"…"</blockquote>
+                    <p class="quote-author rtl" id="quoteAuthor" dir="rtl" lang="ur">— …</p>
+                </div>
+
+                <div class="stamp" id="stamp">Saved</div>
+            </article>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-primary" id="newQuoteBtn">New Quote</button>
+            <div class="btn-with-tooltip">
+                <button class="btn" id="copyBtn">Copy</button>
+                <span class="tooltip" id="copyTooltip">Copied!</span>
+            </div>
+            <a class="btn" id="tweetBtn" href="#" target="_blank" rel="noopener noreferrer">Tweet</a>
+        </div>
+
+        <section class="favourites">
+            <h2>Saved Quotes <span id="favCountLabel">(0)</span></h2>
+            <ul class="fav-list" id="favList"></ul>
+            <p class="empty-state" id="favEmpty">No quotes saved yet — tap the heart on a card you like.</p>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
